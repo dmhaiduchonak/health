@@ -91,8 +91,10 @@ class Commands
                     ($errors > 1 ? 'are' : 'is').
                     ' currently failing.'
             );
+            exit(255);
         } else {
             $this->info($command, 'Check completed with no errors.');
+            exit(0);
         }
     }
 
